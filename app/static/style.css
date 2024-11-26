@@ -1,0 +1,172 @@
+/* static/style.css */
+
+/* Fondo oscuro para todo el cuerpo */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #212529;
+    color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Asegura que el contenido esté centrado en la pantalla */
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 900px;
+    margin-top: 40px;
+}
+
+/* Estilo para las tarjetas */
+.card {
+    background-color: #343a40;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Títulos principales */
+h1 {
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+}
+
+/* Botón de "Volver" */
+.link {
+    background-color: none;
+    color: white;
+    font-size: 18px;
+    padding: 8px 15px;
+    border-radius: 25px;
+}
+
+.link:hover{
+    color: #28a745;
+}
+
+/* static/style.css */
+
+/* Fondo oscuro para todo el cuerpo */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #212529;
+    color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Asegura que el contenido esté centrado en la pantalla */
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 900px;
+    margin-top: 40px;
+}
+
+/* Estilo para las tarjetas */
+.card {
+    background-color: #343a40;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Títulos principales */
+h1 {
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+}
+
+
+
+/* Efecto de sombra y bordes redondeados para las imágenes */
+img {
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para las etiquetas de sentimiento */
+
+
+.feeling-badges  {
+    display: inline-block;
+
+}
+.feeling-badges .feeling-badge {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    background-color: #17a2b8;
+}
+
+/* Estilo para los párrafos y descripción */
+.caption-text p {
+    font-weight: 1000;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #f8f9fb;
+}
+
+/* Espaciado entre elementos */
+.mb-3 {
+    margin-bottom: 20px;
+}
+
+/* Estilo de los campos de texto */
+textarea {
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajuste de imagen más pequeña */
+img.img-fluid {
+    max-width: 60%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+
+/* Efecto de sombra y bordes redondeados para las imágenes */
+img {
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para las etiquetas de sentimiento */
+.feeling-badges .feeling-badge {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 20px;
+    background-color: #17a2b8;
+}
+
+/* Estilo para los párrafos y descripción */
+.caption-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #f8f9fa;
+}
+
+/* Espaciado entre elementos */
+.mb-3 {
+    margin-bottom: 20px;
+}
+
+/* Estilo de los campos de texto */
+textarea {
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajuste de imagen más pequeña */
+img.img-fluid {
+    max-width: 60%;
+    height: auto;
+    margin-bottom: 20px;
+}

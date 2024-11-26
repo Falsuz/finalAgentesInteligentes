@@ -1,19 +1,58 @@
+<!-- templates/upload.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultado de la Subida</title>
+    <!-- Agregar Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Agregar Font Awesome (para iconos) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Agregar Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Agregar CSS personalizado -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
-    <h1>Post Creado con Éxito</h1>
-    <div>
-        <!-- Mostrar la imagen usando base64 -->
-        <img src="data:image/jpeg;base64,{{ img_data }}" alt="Imagen subida" width="300">
-        <p><strong>Descripción:</strong> {{ post.description }}</p>
-        <p><strong>Sentimiento de la imagen:</strong> {{ post.image_sentiment }}</p>
-        <p><strong>Sentimiento del texto:</strong> {{ post.text_sentiment }}</p>
+<body class="d-flex align-items-center justify-content-center" style="height: 100vh; background-color: #212529;">
+    <div class="container mt-5">
+        <h1 class="text-center text-white mb-4">Post Creado con Éxito</h1>
+
+        <div class="card shadow-lg p-4 rounded bg-dark text-white">
+            <div class="card-body">
+                <!-- Mostrar la imagen usando base64 -->
+                <div class="text-center mb-4">
+                    <img src="data:image/jpeg;base64,{{ img_data }}" alt="Imagen subida" class="img-fluid rounded shadow" style="max-width: 60%; height: auto;">
+                </div>
+                <div class="caption-box">
+                    <div class="text-center caption-text">
+                        <p class="lead"> {{ post.description }}</p>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <div class="feeling-badges mb-3">
+                        <p class="lead d-inline-block me-3">
+     
+                            <span class="badge bg-info feeling-badge">Imagen: {{ post.image_sentiment }}</span>
+                        </p>
+        
+                        <p class="lead d-inline-block">
+    
+                            <span class="badge bg-info feeling-badge">Texto: {{ post.text_sentiment }}</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <a href="{{ url_for('index') }}" class="link">
+                        <i class="fas fa-arrow-left"></i> Volver a cargar otro post
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
-    <a href="{{ url_for('index') }}">Volver a cargar otro post</a>
+
+    <!-- Agregar JS de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
