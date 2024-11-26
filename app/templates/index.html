@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Imagen</title>
+</head>
+<body>
+    <h1>Subir Imagen y Descripción</h1>
+    <form method="post" enctype="multipart/form-data">
+        <label for="file">Selecciona una imagen:</label>
+        <input type="file" id="file" name="file">
+        <br>
+        <label for="description">Descripción:</label>
+        <textarea id="description" name="description"></textarea>
+        <br>
+        <input type="submit" value="Subir">
+    </form>
+    {% if img_data %}
+    <h3>Vista previa de la imagen subida:</h3>
+    <img src="data:image/jpeg;base64,{{ img_data }}" alt="Imagen subida" width="300">
+    {% endif %}
+</body>
+</html>

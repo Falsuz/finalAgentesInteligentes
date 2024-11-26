@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado de la Subida</title>
+</head>
+<body>
+    <h1>Post Creado con Éxito</h1>
+    <div>
+        <!-- Mostrar la imagen usando base64 -->
+        <img src="data:image/jpeg;base64,{{ img_data }}" alt="Imagen subida" width="300">
+        <p><strong>Descripción:</strong> {{ post.description }}</p>
+        <p><strong>Sentimiento de la imagen:</strong> {{ post.image_sentiment }}</p>
+        <p><strong>Sentimiento del texto:</strong> {{ post.text_sentiment }}</p>
+    </div>
+    <a href="{{ url_for('index') }}">Volver a cargar otro post</a>
+</body>
+</html>
