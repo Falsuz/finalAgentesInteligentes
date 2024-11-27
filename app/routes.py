@@ -41,6 +41,7 @@ def init_app(app):
                     image_sentiment=image_sentiment,
                     text_sentiment=text_sentiment
                 )
+
                 db.session.add(post)
                 db.session.commit()
                 # Convertimos la imagen en base64 para mostrarla en la plantilla

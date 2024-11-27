@@ -11,25 +11,25 @@ from nltk.corpus import stopwords
 image_model = tf.keras.models.load_model('fashion_mnist.h5')
 """
 
-# def predict_image_sentiment(image_path):
-#     """
-#     Realiza una predicción de sentimiento en una imagen y las pre procesa
-#     """
-#     img = Image.open(image_path).resize((224, 224))  # Ajusta según tu modelo
-#     img_array = np.array(img) / 255.0
-#     img_array = np.expand_dims(img_array, axis=0)  # Agregar dimensión para batch
-#     prediction = image_model.predict(img_array)
-#     labels = ["negative", "neutral", "positive"]
-#     return labels[np.argmax(prediction)]
+def predict_image_sentiment(image_path):
+    """
+    Realiza una predicción de sentimiento en una imagen y las pre procesa
+    """
+    img = Image.open(image_path).resize((224, 224))  # Ajusta según tu modelo
+    img_array = np.array(img) / 255.0
+    img_array = np.expand_dims(img_array, axis=0)  # Agregar dimensión para batch
+    prediction = image_model.predict(img_array)
+    labels = ""
+    return labels[np.argmax(prediction)]
 
-# def predict_text_sentiment(description):
-#     """
-#     Realiza una predicción de sentimiento en un texto.
-#     """
-#     processed_text = preprocess_text(description)
-#     prediction = text_model.predict([processed_text])  # Ajustar según el input del modelo
-#     labels = ["negative", "neutral", "positive"]
-#     return labels[np.argmax(prediction)]
+def predict_text_sentiment(description):
+    """
+    Realiza una predicción de sentimiento en un texto.
+    """
+    processed_text = preprocess_text(description)
+    prediction = text_model.predict([processed_text])  # Ajustar según el input del modelo
+    labels = ["negative", "neutral", "positive"]
+    return labels[np.argmax(prediction)]
 
 # Preprocesamiento
 def preprocess_text(text):
